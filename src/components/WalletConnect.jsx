@@ -72,21 +72,37 @@ function WalletConnect({ wallet }) {
 
         <div className="features">
           <div className="feature">
-            <div className="feature-icon">🔒</div>
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2"/>
+                <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
             <div className="feature-text">
               <h3>Безопасность</h3>
               <p>Ваши ключи остаются в MetaMask</p>
             </div>
           </div>
           <div className="feature">
-            <div className="feature-icon">⚡</div>
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
             <div className="feature-text">
               <h3>Быстрые транзакции</h3>
               <p>Мгновенная отправка криптовалют</p>
             </div>
           </div>
           <div className="feature">
-            <div className="feature-icon">🌐</div>
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                <path d="M2 12H22" stroke="currentColor" strokeWidth="2"/>
+                <path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22C9.5 19.5 8 16 8 12C8 8 9.5 4.5 12 2Z" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+            </div>
             <div className="feature-text">
               <h3>Мультисети</h3>
               <p>Поддержка различных сетей</p>

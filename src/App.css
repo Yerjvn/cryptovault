@@ -469,7 +469,6 @@
 }
 
 .feature-icon {
-  font-size: 1.5rem;
   width: 48px;
   height: 48px;
   display: flex;
@@ -477,6 +476,13 @@
   justify-content: center;
   background: rgba(0, 212, 255, 0.1);
   border-radius: var(--radius-md);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .feature-text h3 {
