@@ -86,7 +86,23 @@
   width: 40px;
   height: 40px;
   color: var(--accent-primary);
-  animation: glow 3s ease-in-out infinite;
+  background: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+  animation: logo-glow 3s ease-in-out infinite;
+}
+
+.logo-icon svg {
+  display: block;
+  background: transparent;
+}
+
+@keyframes logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.7));
+  }
 }
 
 .logo-text {
