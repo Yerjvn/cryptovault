@@ -341,7 +341,7 @@
   height: 100px;
   margin: 0 auto 2rem;
   color: var(--accent-primary);
-  animation: float 4s ease-in-out infinite;
+  animation: float 2s ease-in-out infinite;
 }
 
 .connect-title {
