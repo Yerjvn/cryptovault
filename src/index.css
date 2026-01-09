@@ -1,9 +1,9 @@
 :root {
   /* Цветовая палитра - неоновый кибер стиль */
   --bg-primary: #0a0a0f;
-  --bg-secondary: #12121a;
-  --bg-card: rgba(18, 18, 26, 0.8);
-  --bg-card-hover: rgba(25, 25, 35, 0.9);
+  --bg-secondary: rgba(18, 18, 26, 0.6);
+  --bg-card: rgba(18, 18, 26, 0.5);
+  --bg-card-hover: rgba(25, 25, 35, 0.6);
   
   --text-primary: #f0f0f5;
   --text-secondary: #8888a0;
