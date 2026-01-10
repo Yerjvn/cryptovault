@@ -401,11 +401,14 @@
 .warning-badge {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+  padding: 14px 24px;
   background: rgba(255, 170, 0, 0.1);
   border: 1px solid rgba(255, 170, 0, 0.3);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   color: var(--warning);
   font-size: 0.875rem;
 }
@@ -413,13 +416,17 @@
 .warning-badge svg {
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
 }
 
 .install-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 28px;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+  padding: 14px 24px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
