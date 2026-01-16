@@ -70,7 +70,7 @@ function NetworkSelector({ wallet }) {
           </div>
 
           <div className="dropdown-section">
-            <span className="section-label">🧪 Тестовые сети</span>
+            <span className="section-label"> Тестовые сети</span>
             {testnetNetworks.map((id) => (
               <button
                 key={id}
@@ -99,7 +99,7 @@ function NetworkSelector({ wallet }) {
               rel="noopener noreferrer"
               className="faucet-link"
             >
-              💧 Получить тестовые токены Sepolia
+              Получить тестовые токены Sepolia
             </a>
           </div>
         </div>
