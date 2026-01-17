@@ -6,7 +6,7 @@ function NetworkSelector({ wallet }) {
   const [isSwitching, setIsSwitching] = useState(false);
   const [error, setError] = useState(null);
 
-  // Разделяем сети на основные и тестовые
+  // Separate networks into mainnets and testnets
   const mainnetNetworks = ['1', '137', '56', '42161'];
   const testnetNetworks = ['11155111', '5', '80001', '97', '421614'];
 
@@ -53,7 +53,7 @@ function NetworkSelector({ wallet }) {
       {isOpen && (
         <div className="network-dropdown">
           <div className="dropdown-section">
-            <span className="section-label">Основные сети</span>
+            <span className="section-label">Mainnets</span>
             {mainnetNetworks.map((id) => (
               <button
                 key={id}
@@ -70,7 +70,7 @@ function NetworkSelector({ wallet }) {
           </div>
 
           <div className="dropdown-section">
-            <span className="section-label"> Тестовые сети</span>
+            <span className="section-label">Testnets</span>
             {testnetNetworks.map((id) => (
               <button
                 key={id}
@@ -99,7 +99,7 @@ function NetworkSelector({ wallet }) {
               rel="noopener noreferrer"
               className="faucet-link"
             >
-              Получить тестовые токены Sepolia
+              Get Sepolia test tokens
             </a>
           </div>
         </div>

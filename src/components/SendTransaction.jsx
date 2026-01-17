@@ -21,25 +21,25 @@ function SendTransaction({ wallet, onSuccess }) {
     setError(null);
     setSuccess(null);
 
-    // Валидация
+    // Validation
     if (!recipient || !amount) {
-      setError('Заполните все поля');
+      setError('Please fill in all fields');
       return;
     }
 
     if (!validateAddress(recipient)) {
-      setError('Неверный адрес получателя');
+      setError('Invalid recipient address');
       return;
     }
 
     const numAmount = parseFloat(amount);
     if (isNaN(numAmount) || numAmount <= 0) {
-      setError('Неверная сумма');
+      setError('Invalid amount');
       return;
     }
 
     if (numAmount > parseFloat(wallet.balance)) {
-      setError('Недостаточно средств');
+      setError('Insufficient funds');
       return;
     }
 
@@ -47,19 +47,19 @@ function SendTransaction({ wallet, onSuccess }) {
 
     try {
       const receipt = await wallet.sendTransaction(recipient, amount);
-      setSuccess(`Транзакция успешна! Hash: ${receipt.hash.slice(0, 10)}...`);
+      setSuccess(`Transaction successful! Hash: ${receipt.hash.slice(0, 10)}...`);
       onSuccess(receipt, recipient, amount);
       setRecipient('');
       setAmount('');
     } catch (err) {
-      setError(err.message || 'Ошибка при отправке транзакции');
+      setError(err.message || 'Error sending transaction');
     } finally {
       setIsSending(false);
     }
   };
 
   const setMaxAmount = () => {
-    // Оставляем немного на газ
+    // Leave some for gas
     const maxAmount = Math.max(0, parseFloat(wallet.balance) - 0.001);
     setAmount(maxAmount.toFixed(6));
   };
@@ -71,13 +71,13 @@ function SendTransaction({ wallet, onSuccess }) {
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Отправить
+          Send
         </h2>
       </div>
 
       <form onSubmit={handleSubmit} className="send-form">
         <div className="form-group">
-          <label htmlFor="recipient">Адрес получателя</label>
+          <label htmlFor="recipient">Recipient address</label>
           <input
             type="text"
             id="recipient"
@@ -88,13 +88,13 @@ function SendTransaction({ wallet, onSuccess }) {
             className={recipient && !validateAddress(recipient) ? 'invalid' : ''}
           />
           {recipient && !validateAddress(recipient) && (
-            <span className="field-error">Неверный формат адреса</span>
+            <span className="field-error">Invalid address format</span>
           )}
         </div>
 
         <div className="form-group">
           <label htmlFor="amount">
-            Сумма ({wallet.networkSymbol})
+            Amount ({wallet.networkSymbol})
             <button type="button" className="max-btn" onClick={setMaxAmount}>
               MAX
             </button>
@@ -113,7 +113,7 @@ function SendTransaction({ wallet, onSuccess }) {
             <span className="currency-label">{wallet.networkSymbol}</span>
           </div>
           <span className="available-balance">
-            Доступно: {parseFloat(wallet.balance).toFixed(4)} {wallet.networkSymbol}
+            Available: {parseFloat(wallet.balance).toFixed(4)} {wallet.networkSymbol}
           </span>
         </div>
 
@@ -145,14 +145,14 @@ function SendTransaction({ wallet, onSuccess }) {
           {isSending ? (
             <>
               <span className="spinner"></span>
-              Отправка...
+              Sending...
             </>
           ) : (
             <>
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              Отправить транзакцию
+              Send Transaction
             </>
           )}
         </button>

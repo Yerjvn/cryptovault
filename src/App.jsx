@@ -67,7 +67,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Работает на базе Ethereum • Требуется MetaMask</p>
+        <p>Powered by Ethereum • MetaMask required</p>
       </footer>
     </div>
   );

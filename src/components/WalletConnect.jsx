@@ -13,10 +13,10 @@ function WalletConnect({ wallet }) {
           </svg>
         </div>
         
-        <h1 className="connect-title">Добро пожаловать в CryptoVault</h1>
+        <h1 className="connect-title">Welcome to CryptoVault</h1>
         <p className="connect-description">
-          Безопасный криптокошелёк для отправки и получения криптовалют. 
-          Подключите MetaMask для начала работы.
+          Secure crypto wallet for sending and receiving cryptocurrencies. 
+          Connect MetaMask to get started.
         </p>
 
         {!isMetaMaskInstalled ? (
@@ -25,7 +25,7 @@ function WalletConnect({ wallet }) {
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 9V13M12 17H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <span>MetaMask не обнаружен</span>
+              <span>MetaMask not detected</span>
             </div>
             <a 
               href="https://metamask.io/download/" 
@@ -36,7 +36,7 @@ function WalletConnect({ wallet }) {
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21 15V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V15M17 10L12 15M12 15L7 10M12 15V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              Установить MetaMask
+              Install MetaMask
             </a>
           </div>
         ) : (
@@ -48,14 +48,14 @@ function WalletConnect({ wallet }) {
             {isConnecting ? (
               <>
                 <span className="spinner"></span>
-                Подключение...
+                Connecting...
               </>
             ) : (
               <>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                Подключить MetaMask
+                Connect MetaMask
               </>
             )}
           </button>
@@ -80,8 +80,8 @@ function WalletConnect({ wallet }) {
               </svg>
             </div>
             <div className="feature-text">
-              <h3>Безопасность</h3>
-              <p>Ваши ключи остаются в MetaMask</p>
+              <h3>Security</h3>
+              <p>Your keys stay in MetaMask</p>
             </div>
           </div>
           <div className="feature">
@@ -91,8 +91,8 @@ function WalletConnect({ wallet }) {
               </svg>
             </div>
             <div className="feature-text">
-              <h3>Быстрые транзакции</h3>
-              <p>Мгновенная отправка криптовалют</p>
+              <h3>Fast Transactions</h3>
+              <p>Instant crypto transfers</p>
             </div>
           </div>
           <div className="feature">
@@ -104,8 +104,8 @@ function WalletConnect({ wallet }) {
               </svg>
             </div>
             <div className="feature-text">
-              <h3>Мультисети</h3>
-              <p>Поддержка различных сетей</p>
+              <h3>Multi-Network</h3>
+              <p>Support for various networks</p>
             </div>
           </div>
         </div>
